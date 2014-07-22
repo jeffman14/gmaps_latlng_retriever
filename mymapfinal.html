@@ -1,0 +1,143 @@
+<?php session_start();?>
+<!DOCTYPE html >
+
+  <head>
+    <title>BusFinder Map</title>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>	
+	<link href="twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet" media="screen">
+	
+
+	
+	
+	<style>
+	#map img{
+			    max-width: none;				
+		    }
+	#left{
+	background-color:#F5F5F5;
+	}
+  </style>
+	
+  <script type="text/javascript" src="gmapscript.js"></script>	
+
+  </head>
+
+  <body onload="load()">
+  <div id="left" style="width:18.5%; height:650px; float:left;padding-left:5px;">
+
+	<form   method="post" id="form1" name="form1" action="addlocation.php">
+	<br/>	
+	<input id="lat" style="border:1px inset black; width:95%;">
+	<input id="lng" style="border:1px inset black; width:95%;"><br/>	
+	<b>Latitude</b> <br/>
+  	<input type="text" name="lat" id="latclicked" style="width:95%; border:1px inset gray;">
+	<br/>
+	<b>Longitude</b> <br/>
+  	<input type="text" name="lng" id="longclicked" style="width:95%; border:1px inset gray;">
+	<br/>
+	<b>Name</b> 
+  	<input type="text" name="locname" id="locname" style="width:95%; border:1px inset gray;"><br/>
+	<b>Address</b> 
+  	<input type="text" name="address" id="address" style="width:95%; border:1px inset gray;"><br/>
+	<b>Website</b> 
+  	<input type="text" name="web" id="web" style="width:95%; border:1px inset gray;">
+	<br/>
+	<b>Type</b>
+	<Select id="loctype" name="loctype"style="width:98%; border:1px inset gray;">
+	<Option>
+	<Option>Accounting Firm
+    <Option>Airport
+    <Option>Amusement Park
+    <Option>Aquarium
+    <Option>ATM
+    <Option>Bakery
+    <Option>Bank
+    <Option>Bar
+	<Option>Beach
+    <Option>Beauty Salon
+    <Option>Bicycle Store
+    <Option>BookStore
+	<Option>Bridge
+    <Option>BusStation
+    <Option>Cafe
+	<Option>Canteen
+    <Option>CarDealer
+    <Option>CarRental
+    <Option>CarRepair
+    <Option>CarWash
+    <Option>Casino
+    <Option>Cemetery
+    <Option>Church
+    <Option>City/MunicipalHall
+    <Option>ClothingStore
+    <Option>ConvenienceStore
+    <Option>Courthouse
+    <Option>DentalClinic
+    <Option>ElectronicsStore
+    <Option>Embassy
+    <Option>Establishment
+	<Option>Farm
+	<option>FillingStation
+    <Option>FireStation
+	<Option>FuneralHome
+    <Option>FurnitureStore
+    <Option>Construction
+    <Option>Grocery	
+    <Option>Gym
+    <Option>Hospital
+	<Option>InternetCafe
+    <Option>JewelryStore
+    <Option>LaundryShop
+    <Option>Lawyer
+    <Option>Library
+    <Option>LiquorStore
+    <Option>GovernmentOffice
+    <Option>LodgingHouse
+    <Option>Mall
+    <Option>Mosque
+    <Option>MovieTheater
+	<Option>Museum
+    <Option>NightClub
+    <Option>Park
+    <Option>PetStore
+    <Option>Pharmacy
+	<Option>PoliceStation
+    <Option>PostOffice
+    <Option>RealEstateAgency
+	<Option>Residential
+	<Option>Resort
+    <Option>Restaurant
+	<Option>River
+    <Option>School
+    <Option>Shoe Store
+    <Option>Spa
+    <Option>Stadium
+    <Option>Store
+	<Option>Supermarket
+    <Option>TaxiStand
+    <Option>TrainStation
+    <Option>TravelAgency
+    <Option>University
+    <Option>Veterinary
+    <Option>Zoo
+	 <Option>Gazebo
+	</select>	<br/>
+	
+	<center>
+		<input class="btn btn-success btn-medium" type="submit" value="Save" id="save" onClick="return validateForm()">      
+		<input class="btn btn-danger btn-medium" type="reset" value="Clear" id="reset">
+	</center>
+	
+	</form>
+
+	<br/>
+	
+</div>
+  
+  
+  
+  
+    <div id="map" style="width:81%; float:right; height:650px;"></div>
+  </body>
+
+</html>
