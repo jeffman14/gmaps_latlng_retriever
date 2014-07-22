@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BusFinder.PH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="twitter-bootstrap-v2/docs/assets/css/example-fluid-layout.css" rel="stylesheet">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="twitter-bootstrap-v2/docs/examples/images/favicon.ico">
+    <link rel="apple-touch-icon" href="twitter-bootstrap-v2/docs/examples/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-114x114.png">
+
+<script>
+
+
+function validateForm()
+{
+var name=document.forms["form1"]["name"].value;
+   if (name==null || name=="")
+  {
+  alert("name must be filled out");
+  return false;
+
+  }
+  var re = new RegExp("[0-9]");
+if(re.test(name)==true){
+alert("name must not contain numbers!");
+  return false;
+}
+   
+
+  var email=document.forms["form1"]["email"].value;
+var atpos=email.indexOf("@");
+var dotpos=email.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
+  {
+  alert("Not a valid e-mail address!");
+  return false;
+  }
+
+var address=document.forms["form1"]["address"].value;
+if (address==null || address==""|| address.length<5)
+  {
+  alert("Address must be filled out correctly!");
+  return false;
+  }
+
+
+
+}
+
+
+</script>
+
+
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html" >BusFinder.PH</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li ><a href="index.html"><i class="icon-white icon-home"></i> Home</a></li>
+	      <li ><a href="index.html"><i class="icon-white icon-user"></i> Register</a></li>
+              <li class="active"><a href="mymapfinal.html"><i class="icon-bookmark  icon-white"></i> Map</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+ <hr>
+    </div> <!-- /container -->
+<div>
+
+  <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div ><div class="alert alert-success">
+          <a class="close" data-dismiss="alert"></a>
+          <strong>Register now to be the first to test our beta release! At <a href="http://www.facebook.com/BusFinder.ph" target="_blank">BusFinder.PH</a>, you can travel in your own convenience.</strong></div>
+
+            <form name="form1" class="well form-inline" method="post" action="register.php" onsubmit="return validateForm()">          
+            <div class="controls">
+              <input type="text" class="input-xlarge" name="name" placeholder="Comlete name...">
+              </br>
+            </div>  </br>          
+            <div class="controls">
+              <input type="text" class="input-xlarge" name="email" placeholder="Email address...">
+              </br>
+            </br>
+
+            <input type="text" class="input-xlarge" name="address" placeholder="Complete address...">
+              </br></br>
+            <button type="submit" class="btn btn-primary" type="submit" name="Submit" value="Submit">Register</button>
+            <button class="btn" type="reset">Cancel</button>
+            </div>
+            </form>
+
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="leaderboard">
+            <h1>travel in your own convenience...</h1>
+          <p>BusFinder.PH is a GPS-powered tracking system which enables commuters to track, locate, and reserve provincial transport buses anytime, anywhere! It is founded by three third-year students of Liceo de Cagayan University, Cagayan de Oro City. In March 2014, this technology-based start-up and idea qualified as top 4% among the 630 start-up applicants around the Philippines and the only incubatee of IdeaSpace Foundation, Inc. from Region 10</p>
+
+          <p>Excited for the release? Register today and be the first of your friends to test our beta application! Register your email and give us your comments to improve our service so that we can make commuting in Mindanao, easy, fun, and enjoyable. Support <a href="http://www.facebook.com/BusFinder.ph" target="_blank">BusFinder.PH</a> now! Invite your friends to register.</p>
+            
+            <a class="btn btn-success btn-large" href="http://www.facebook.com/BusFinder.ph" target="_blank">Find us on Facebook</a> <a class="btn btn-success btn-large">Find us on Facebook</a>
+
+
+
+
+
+          </div>
+
+         
+          <hr>
+     <footer>
+        <p align="center">© BusFinder.PH 2014</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+
+
+
+
+
+
+    <!-- Le javascript
+ ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-transition.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-alert.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-modal.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-tab.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-tooltip.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-popover.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-button.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-collapse.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-carousel.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-typeahead.js"></script>
+
+ </body>
+
+
+
+</html>	
